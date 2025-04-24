@@ -63,7 +63,13 @@ function getRange(numbers) {
  * @returns {number[]} the even numbers in the array
  */
 function getEvens(numbers) {
-  // TODO
+  let evenNumbers = [];
+  for (let i = 0; i < numbers.length; i++) {
+    if (numbers[i] % 2 == 0) {
+      evenNumbers.push(numbers[i]);
+    }
+  }
+  return evenNumbers;
 }
 
 /**
@@ -105,7 +111,7 @@ function describeNumbers(numbers) {
   console.log(`The smallest of your numbers is ${getMin(numbers)}.`);
   console.log(`The largest of your numbers is ${getMax(numbers)}.`);
   console.log(`The range of your numbers is ${getRange(numbers)}.`);
-  // console.log(`The even numbers you gave are ${getEvens(numbers)}.`);
+  console.log(`The even numbers you gave are ${getEvens(numbers)}.`);
   // console.log(`The odd numbers you gave are ${getOdds(numbers)}.`);
 }
 
